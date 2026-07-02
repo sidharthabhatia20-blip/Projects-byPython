@@ -1,4 +1,4 @@
-#History
+#History for calculations
 a = []
 #decimal to other
 def decimal_to_octal(c):
