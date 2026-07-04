@@ -1,8 +1,8 @@
 print("Instructions:")
 print("\n1) This test consists of 2 parts MCQS and Subjective.")
-print("\n2) Each MCQ is of 1 mark and each subjective question is of 2.5 marks")
-print("\n3) There will be no negative marking for incorrect MCQS")
-print("\n4) If any candidate is found using unfair means, they will be disqualified from the examination and strict disciplinary action will be taken \n")
+print("\n2) Each MCQ is of 1 mark and each subjective question is of 2.5 marks.")
+print("\n3) There will be no negative marking for incorrect MCQS.")
+print("\n4) If any candidate is found using unfair means, they will be disqualified from the examination and strict disciplinary action will be taken. \n")
 
 MCQ_SCORE = 0
 
