@@ -10,7 +10,7 @@ while (True):
         print("You won the game")
         break
     elif c == 1:
-        print("You have finished your attempts")
+        print("You lost! correct word/number was",a)
         break
 
     c -= 1
