@@ -1,3 +1,4 @@
+# For storing calculations
 history = []
 
 r = None
