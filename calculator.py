@@ -1,6 +1,6 @@
 history = []
 
-r = 0
+r = None
 
 while True:
 
@@ -13,6 +13,13 @@ while True:
     a = float(input("Enter number: "))
     op = input("Enter operator +, -, x, /: ")
 
+    if r is None:
+        r = a
+        history.append(f"Start = {r}")
+        print("Result:", r)
+        continue
+        
+
     if op == "+":
 
         r += a
@@ -22,10 +29,6 @@ while True:
         r -= a
 
     elif op.lower() == "x":
-
-        if r == 0:
-            r = 1
-
         r *= a
 
     elif op == "/":
@@ -37,9 +40,9 @@ while True:
         r /= a
 
     else:
-
         print("Invalid arithmetic operator")
         continue
+        
 
 
     history.append(f"{op} {a} = {r}")
