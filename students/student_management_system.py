@@ -53,15 +53,15 @@ class Student:
 
             vs = 0
             while vs < s:
-                self.subjects = input(f"Enter subject {vs+1} name: ").lower
-                sub = cur.execute("select ROLL_NO, SUBJECT FROM MARK WHERE SUBJECT = ? AND ROLL_NO = ?", (self.subjects, roll_no))
-                if sub.fetchone() is not None:
+                self.subjects = input(f"Enter subject {vs+1} name: ").lower()
+                cur.execute("select ROLL_NO, SUBJECT FROM MARK WHERE SUBJECT = ? AND ROLL_NO = ?", (self.subjects, roll_no))
+                if cur.fetchone() is not None:
                     print("This subject already exist enter another subject")
                     continue
                 else:
                     self.marks = float(input(f"Enter {vs+1} marks: "))
                     cur.execute("insert into MARK(ROLL_NO, SUBJECT, MARKS) VALUES(?, ?, ?)", (roll_no, self.subjects, self.marks))
-                    db.comit()
+                    db.commit()
                     self.student_information[i]["marks"][self.subjects] = self.marks
                     vs = vs+1
                     
