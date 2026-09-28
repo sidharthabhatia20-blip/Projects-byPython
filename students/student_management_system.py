@@ -53,7 +53,7 @@ class Student:
 
             vs = 0
             while vs < s:
-                self.subjects = input(f"Enter subject {vs+1} name").lower
+                self.subjects = input(f"Enter subject {vs+1} name: ").lower
                 sub = cur.execute("select ROLL_NO, SUBJECT FROM MARK WHERE SUBJECT = ? AND ROLL_NO = ?", (self.subjects, roll_no))
                 if sub.fetchone() is not None:
                     print("This subject already exist enter another subject")
